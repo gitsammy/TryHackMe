@@ -1,6 +1,6 @@
 ### Step-by-step solution for attacking Kerberos
 
-### Enummeration with Kerbrute
+### Enumeration with Kerbrute
 Use Kerbrute to enumerate valid Active Directory users by abusing Kerberos pre-Authentication
 
 1.  Install Kerbrute ---> https://github.com/ropnop/kerbrute/releases
