@@ -1,6 +1,6 @@
 ### Step-by-step solution for attacking Kerberos
 
-### Enumeration with Kerbrute
+### Enumeration with Kerbrute  ---> NO DOMAIN ACCESS REQUIRED
 Use Kerbrute to enumerate valid Active Directory users by abusing Kerberos pre-Authentication
 
 1.  Install Kerbrute ---> https://github.com/ropnop/kerbrute/releases
@@ -9,15 +9,15 @@ Use Kerbrute to enumerate valid Active Directory users by abusing Kerberos pre-A
 3.  Make sure you have a list of usernames available to enumerate through (example: we will use one called User.txt) 
 4.  Run ---> ./Kerbrute --dc CONTROLLER.local -d CONTROLLER.local User.txt
 
-### Harvesting and Brute-Forcing Tickets with Rubeus
+### Harvesting and Brute-Forcing Tickets with Rubeus  ---> ACCESS AS A USER TO DOMAIN REQUIRED 
 
-### Kerberoasting with Rubeus and Impacket
+### Kerberoasting with Rubeus and Impacket  ---> ACCESS AS ANY USER TO DOMAIN REQUIRED
 
-### AS-REP roasting with Rubeus
+### AS-REP roasting with Rubeus  ---> ACCESS AS ANY USER TO DOMAIN REQUIRED
 
-### Pass the Ticket with Mimikatz
+### Pass the Ticket with Mimikatz  ---> ACCESS AS A USER TO DOMAIN REQUIRED 
 
-### Golden/Silver Ticket Attacks with Mimikatz
+### Golden/Silver Ticket Attacks with Mimikatz ---> FULL DOMAIN COMPROMISE (DOMAIN ADMIN) REQUIRED for GOLDEN/ SERVICE HASH REQUIRED for SILVER
 
 ### Kerberos Backdoors with Mimikatz
 
