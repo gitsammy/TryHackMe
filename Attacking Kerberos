@@ -1,6 +1,13 @@
 ### Step-by-step solution for attacking Kerberos
 
 ### Enummeration with Kerbrute
+Use Kerbrute to enumerate valid Active Directory users by abusing Kerberos pre-Authentication
+
+1.  Install Kerbrute ---> https://github.com/ropnop/kerbrute/releases
+2.  For Linux - make sure your attack box ip and DNS domain name are added in the /etc/hosts file or attacks won't work
+      echo <ip> <controller> >> /etc/hosts (example: echo 10.10.123.456 CONTROLLER.local >> /etc/hosts)
+3.  Make sure you have a list of usernames available to enumerate through (example: we will use one called User.txt) 
+4.  Run ---> ./Kerbrute --dc CONTROLLER.local -d CONTROLLER.local User.txt
 
 ### Harvesting and Brute-Forcing Tickets with Rubeus
 
